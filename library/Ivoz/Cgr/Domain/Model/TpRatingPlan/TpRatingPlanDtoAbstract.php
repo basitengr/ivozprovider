@@ -43,6 +43,51 @@ abstract class TpRatingPlanDtoAbstract implements DataTransferObjectInterface
     private $createdAt = 'CURRENT_TIMESTAMP';
 
     /**
+     * @var string
+     */
+    private $timingType = 'always';
+
+    /**
+     * @var \DateTime
+     */
+    private $timeIn;
+
+    /**
+     * @var boolean
+     */
+    private $monday = '1';
+
+    /**
+     * @var boolean
+     */
+    private $tuesday = '1';
+
+    /**
+     * @var boolean
+     */
+    private $wednesday = '1';
+
+    /**
+     * @var boolean
+     */
+    private $thursday = '1';
+
+    /**
+     * @var boolean
+     */
+    private $friday = '1';
+
+    /**
+     * @var boolean
+     */
+    private $saturday = '1';
+
+    /**
+     * @var boolean
+     */
+    private $sunday = '1';
+
+    /**
      * @var integer
      */
     private $id;
@@ -86,6 +131,15 @@ abstract class TpRatingPlanDtoAbstract implements DataTransferObjectInterface
             'timingTag' => 'timingTag',
             'weight' => 'weight',
             'createdAt' => 'createdAt',
+            'timingType' => 'timingType',
+            'timeIn' => 'timeIn',
+            'monday' => 'monday',
+            'tuesday' => 'tuesday',
+            'wednesday' => 'wednesday',
+            'thursday' => 'thursday',
+            'friday' => 'friday',
+            'saturday' => 'saturday',
+            'sunday' => 'sunday',
             'id' => 'id',
             'timingId' => 'timing',
             'ratingPlanId' => 'ratingPlan',
@@ -105,6 +159,15 @@ abstract class TpRatingPlanDtoAbstract implements DataTransferObjectInterface
             'timingTag' => $this->getTimingTag(),
             'weight' => $this->getWeight(),
             'createdAt' => $this->getCreatedAt(),
+            'timingType' => $this->getTimingType(),
+            'timeIn' => $this->getTimeIn(),
+            'monday' => $this->getMonday(),
+            'tuesday' => $this->getTuesday(),
+            'wednesday' => $this->getWednesday(),
+            'thursday' => $this->getThursday(),
+            'friday' => $this->getFriday(),
+            'saturday' => $this->getSaturday(),
+            'sunday' => $this->getSunday(),
             'id' => $this->getId(),
             'timing' => $this->getTiming(),
             'ratingPlan' => $this->getRatingPlan(),
@@ -248,6 +311,186 @@ abstract class TpRatingPlanDtoAbstract implements DataTransferObjectInterface
     public function getCreatedAt()
     {
         return $this->createdAt;
+    }
+
+    /**
+     * @param string $timingType
+     *
+     * @return static
+     */
+    public function setTimingType($timingType = null)
+    {
+        $this->timingType = $timingType;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTimingType()
+    {
+        return $this->timingType;
+    }
+
+    /**
+     * @param \DateTime $timeIn
+     *
+     * @return static
+     */
+    public function setTimeIn($timeIn = null)
+    {
+        $this->timeIn = $timeIn;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTimeIn()
+    {
+        return $this->timeIn;
+    }
+
+    /**
+     * @param boolean $monday
+     *
+     * @return static
+     */
+    public function setMonday($monday = null)
+    {
+        $this->monday = $monday;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getMonday()
+    {
+        return $this->monday;
+    }
+
+    /**
+     * @param boolean $tuesday
+     *
+     * @return static
+     */
+    public function setTuesday($tuesday = null)
+    {
+        $this->tuesday = $tuesday;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getTuesday()
+    {
+        return $this->tuesday;
+    }
+
+    /**
+     * @param boolean $wednesday
+     *
+     * @return static
+     */
+    public function setWednesday($wednesday = null)
+    {
+        $this->wednesday = $wednesday;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getWednesday()
+    {
+        return $this->wednesday;
+    }
+
+    /**
+     * @param boolean $thursday
+     *
+     * @return static
+     */
+    public function setThursday($thursday = null)
+    {
+        $this->thursday = $thursday;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getThursday()
+    {
+        return $this->thursday;
+    }
+
+    /**
+     * @param boolean $friday
+     *
+     * @return static
+     */
+    public function setFriday($friday = null)
+    {
+        $this->friday = $friday;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getFriday()
+    {
+        return $this->friday;
+    }
+
+    /**
+     * @param boolean $saturday
+     *
+     * @return static
+     */
+    public function setSaturday($saturday = null)
+    {
+        $this->saturday = $saturday;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSaturday()
+    {
+        return $this->saturday;
+    }
+
+    /**
+     * @param boolean $sunday
+     *
+     * @return static
+     */
+    public function setSunday($sunday = null)
+    {
+        $this->sunday = $sunday;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSunday()
+    {
+        return $this->sunday;
     }
 
     /**

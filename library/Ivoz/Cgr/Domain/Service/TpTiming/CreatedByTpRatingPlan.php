@@ -29,7 +29,7 @@ class CreatedByTpRatingPlan implements TpRatingPlanLifecycleEventHandlerInterfac
     public static function getSubscribedEvents()
     {
         return [
-            self::EVENT_POST_PERSIST => PRIORITY_NORMAL
+            self::EVENT_POST_PERSIST => self::PRIORITY_NORMAL
         ];
     }
 
